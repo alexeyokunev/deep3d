@@ -11,7 +11,8 @@ https://medium.com/@linhlinhle997/how-to-install-docker-and-nvidia-docker-2-0-on
 1. скачать Dockerfile **или** скопировать его содержимое в текстовый файл, который надо сохранить под именем Dockerfile (без расширения)
 2. перейти в директорию, где находится Dockerfile
 3. выполнить
-$ sudo docker build -t mmdet3d .
+
+sudo docker build -t mmdet3d .
 
 4. выполнить
 
