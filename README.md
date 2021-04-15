@@ -8,10 +8,12 @@
 https://medium.com/@linhlinhle997/how-to-install-docker-and-nvidia-docker-2-0-on-ubuntu-18-04-da3eac6ec494
 
 Для начала работы: 
-1. скачать Dockderfile **или** скопировать его содержимое в текстовый файл, который надо сохранить под именем Dockerfile (без расширения)
+1. скачать Dockerfile **или** скопировать его содержимое в текстовый файл, который надо сохранить под именем Dockerfile (без расширения)
 2. перейти в директорию, где находится Dockerfile
 3. выполнить
+
 $ sudo docker build -t mmdet3d .
 5. выполнить
-sudo docker run --rm --gpus '"device=0"' -it -p 8081:8081 -v /home/{insert_your_home_folder_name}:/home --ipc=host mmdet3d jupyter notebook --no-browser --ip=0.0.0.0 --port=8080 --allow-root --NotebookApp.token='your_token'
+
+sudo docker run --rm --gpus '"device=0"' -it -p 8080:8080 -v /home/{insert_your_home_folder_name}:/home --ipc=host mmdet3d jupyter notebook --no-browser --ip=0.0.0.0 --port=8080 --allow-root --NotebookApp.token='your_token'
 6. если проект развернут на сервере, то в браузере ввести http://10.4.88.5:8080/ (заменить адрес сервера на актуальный)
